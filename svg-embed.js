@@ -1,9 +1,9 @@
 var EmbedSVG = (function(){
     var EmbedSVGs = function({settings}){
-        setting.selector = setting.selector || 'img.svg'
-        var imagesToEmbed = jQuery(setting.selector);
-        var count = imagesToEmbed.size();
+        settings.selector = settings.selector || 'img.svg';
         settings.callback = settings.callback || settings.onComplete || function(){};
+        var imagesToEmbed = jQuery(settings.selector);
+        var count = imagesToEmbed.size();
         var wrapCallback = function(){
             count -= 1;
             if (!count){
