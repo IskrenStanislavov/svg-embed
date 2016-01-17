@@ -1,5 +1,5 @@
 var EmbedSVG = (function(){
-    var EmbedSVGs = function({settings}){
+    var EmbedSVGs = function(settings){
         settings.selector = settings.selector || 'img.svg';
         settings.callback = settings.callback || settings.onComplete || function(){};
         var imagesToEmbed = jQuery(settings.selector);
