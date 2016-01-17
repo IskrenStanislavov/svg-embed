@@ -36,6 +36,11 @@ var EmbedSVG = (function(){
                 $svg = $svg.removeAttr('xmlns:a');
 
                 // Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+                if ($img.css("width") || $img.css("height")){
+                    $svg.attr("width", $img.css("width"));
+                    $svg.attr("height", $img.css('height'));
+                }
+
                 if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
                     $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
                 }
